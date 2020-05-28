@@ -89,50 +89,50 @@
   (require 'init-exec-path) ;; Set up $PATH
   ;; Any file use flyspell should be initialized after init-spelling.el
   (require 'init-spelling)
-  (require 'init-gui-frames)
+  ;;(require 'init-gui-frames)
   (require 'init-uniquify)
   (require 'init-ibuffer)
   (require 'init-ivy)
   (require 'init-hippie-expand)
   (require 'init-windows)
   (require 'init-markdown)
-  (require 'init-javascript)
+  ;; (require 'init-javascript)
   (require 'init-org)
-  (require 'init-css)
-  (require 'init-python)
-  (require 'init-ruby-mode)
-  (require 'init-lisp)
-  (require 'init-elisp)
+  ;; (require 'init-css)
+  ;; (require 'init-python)
+  ;; (require 'init-ruby-mode)
+  ;; (require 'init-lisp)
+  ;; (require 'init-elisp)
   (require 'init-yasnippet)
   (require 'init-cc-mode)
   (require 'init-gud)
   (require 'init-linum-mode)
-  (require 'init-git) ;; git-gutter should be enabled after `display-line-numbers-mode' turned on
+  ;; (require 'init-git) ;; git-gutter should be enabled after `display-line-numbers-mode' turned on
   ;; (require 'init-gist)
   (require 'init-gtags)
   ;; init-evil dependent on init-clipboard
-  (require 'init-clipboard)
+  ;;(require 'init-clipboard)
   ;; use evil mode (vi key binding)
-  (require 'init-evil)
+  ;; (require 'init-evil)
   (require 'init-ctags)
-  (require 'init-bbdb)
-  (require 'init-gnus)
+  ;; (require 'init-bbdb)
+  ;; (require 'init-gnus)
   (require 'init-lua-mode)
-  (require 'init-workgroups2)
+  ;; (require 'init-workgroups2)
   (require 'init-term-mode)
-  (require 'init-web-mode)
+  ;; (require 'init-web-mode)
   (require 'init-company)
-  (require 'init-chinese) ;; cannot be idle-required
+  ;; (require 'init-chinese) ;; cannot be idle-required
   ;; need statistics of keyfreq asap
-  (require 'init-keyfreq)
-  (require 'init-httpd)
+  ;; (require 'init-keyfreq)
+  ;; (require 'init-httpd)
 
   ;; projectile costs 7% startup time
 
   ;; misc has some crucial tools I need immediately
   (require 'init-misc)
 
-  (require 'init-emacs-w3m)
+  ;;(require 'init-emacs-w3m)
   (require 'init-hydra)
   (require 'init-shackle)
   (require 'init-dired)
@@ -150,9 +150,9 @@
   (load (expand-file-name "~/.custom.el") t nil)
 
   ;; {{ `evil-matchit' could use setup in".custom.el"
-  (when my-use-m-for-matchit
-    (setq evilmi-shortcut "m"))
-  (global-evil-matchit-mode 1)
+  ;;(when my-use-m-for-matchit
+  ;;  (setq evilmi-shortcut "m"))
+  ;;(global-evil-matchit-mode 1)
   ;; }}
 
   ;; @see https://www.reddit.com/r/emacs/comments/4q4ixw/how_to_forbid_emacs_to_touch_configuration_files/

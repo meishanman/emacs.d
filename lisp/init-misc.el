@@ -170,8 +170,8 @@
 
 ;; Don't echo passwords when communicating with interactive programs:
 ;; Github prompt is like "Password for 'https://user@github.com/':"
-(setq comint-password-prompt-regexp (format "%s\\|^ *Password for .*: *$" comint-password-prompt-regexp))
-(add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
+;; (setq comint-password-prompt-regexp (format "%s\\|^ *Password for .*: *$" comint-password-prompt-regexp))
+;; (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
 
 ;; {{ which-key-mode
 (local-require 'which-key)
@@ -867,13 +867,13 @@ If no region is selected. You will be asked to use `kill-ring' or clipboard inst
 ;; }}
 
 ;; {{
-(local-require 'typewriter-mode)
-(defun toggle-typewriter ()
-  "Turn on/off typewriter."
-  (interactive)
-  (if (bound-and-true-p typewriter-mode)
-      (typewriter-mode -1)
-    (typewriter-mode 1)))
+;;(local-require 'typewriter-mode)
+;;(defun toggle-typewriter ()
+;;  "Turn on/off typewriter."
+;;  (interactive)
+;;  (if (bound-and-true-p typewriter-mode)
+;;     (typewriter-mode -1)
+;;    (typewriter-mode 1)))
 ;; }}
 
 ;; @see https://github.com/szermatt/emacs-bash-completion
