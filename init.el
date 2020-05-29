@@ -118,6 +118,7 @@
   ;; (require 'init-bbdb)
   ;; (require 'init-gnus)
   (require 'init-lua-mode)
+  (require 'init-scheme)
   ;; (require 'init-workgroups2)
   (require 'init-term-mode)
   ;; (require 'init-web-mode)
