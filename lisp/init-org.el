@@ -207,4 +207,33 @@ It's value could be customized liked \"/usr/bin/firefox\".
            ;; @see http://irreal.org/blog/1
            org-src-fontify-natively t)))
 
+(require 'ox-publish)
+(setq org-publish-project-alist
+      (backquote(
+        ("org-notes"
+         :base-directory ,(ffip-get-project-root-directory)
+         :base-extension "org"
+         :publishing-directory ,(format "%shtml" (ffip-get-project-root-directory))
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :auto-preamble t
+         :auto-sitemap t                ; Generate sitemap.org automagically...
+         :sitemap-filename "index.org"  ; ... call it sitemap.org (it's the default)...
+         :sitemap-title "笔记列表"         ; ... with title 'Sitemap'.
+         :author "chenjunjun"
+         )
+        ("org-static"
+         :base-directory ,(format "%sstatic" (ffip-get-project-root-directory))
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory ,(format "%shtml/static" (ffip-get-project-root-directory))
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("org" :components ("org-notes" "org-static"))
+        )
+                )
+      )
+
+
 (provide 'init-org)
