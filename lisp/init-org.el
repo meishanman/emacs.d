@@ -208,12 +208,17 @@ It's value could be customized liked \"/usr/bin/firefox\".
            org-src-fontify-natively t)))
 
 (require 'ox-publish)
+(require 'counsel)
+;; 取消上标和下标的转换
+(setq org-export-with-sub-superscripts nil)
+;; 取消生成html时页面的 Validate 链接
+(setq org-html-validation-link nil)
 (setq org-publish-project-alist
       (backquote(
         ("org-notes"
-         :base-directory ,(ffip-get-project-root-directory)
+         :base-directory ,(counsel--git-root)
          :base-extension "org"
-         :publishing-directory ,(format "%shtml" (ffip-get-project-root-directory))
+         :publishing-directory ,(format "%shtml" (counsel--git-root))
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 4             ; Just the default for this project.
@@ -221,12 +226,13 @@ It's value could be customized liked \"/usr/bin/firefox\".
          :auto-sitemap t                ; Generate sitemap.org automagically...
          :sitemap-filename "index.org"  ; ... call it sitemap.org (it's the default)...
          :sitemap-title "笔记列表"         ; ... with title 'Sitemap'.
-         :author "chenjunjun"
+         :author nil ;; 取消显示作者
+         :creator nil ;; 取消显示作者
          )
         ("org-static"
-         :base-directory ,(format "%sstatic" (ffip-get-project-root-directory))
+         :base-directory ,(format "%sstatic" (counsel--git-root))
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory ,(format "%shtml/static" (ffip-get-project-root-directory))
+         :publishing-directory ,(format "%shtml/static" (counsel--git-root))
          :recursive t
          :publishing-function org-publish-attachment
          )
