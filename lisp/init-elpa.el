@@ -104,6 +104,11 @@
     w3m
     workgroups2
     zoutline
+    use-package
+    lsp-mode
+    lsp-ui
+    company-lsp
+    ccls
     company-c-headers
     company-statistics)
   "Packages to install from melpa-unstable.")
@@ -149,7 +154,15 @@ You still need modify `package-archives' in \"init-elpa.el\" to PERMANENTLY use 
           ("melpa-stable" . "https://mirrors.163.com/elpa/melpa-stable/"))))
 
 ;; Un-comment below line if you follow "Install stable version in easiest way"
-(setq package-archives '(("localelpa" . "~/.emacs.d/localelpa/") ("myelpa" . "~/.usr/myelpa/")))
+;;(setq package-archives '(("localelpa" . "~/.emacs.d/localelpa/") ("myelpa" . "~/.usr/myelpa/")))
+(setq package-archives '(
+        ;;("localelpa" . "~/.emacs.d/localelpa/")
+         ;; ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+          ("gnu" . "http://mirrors.163.com/elpa/gnu/")
+	  ("melpa" . "http://mirrors.163.com/elpa/melpa/")
+          ("melpa-stable" . "http://mirrors.163.com/elpa/melpa-stable/")
+         ;; ("melpa" . "https://mirrors.163.com/elpa/melpa/")
+      ))
 
 ;;--------------------------------------------------------------------------
 ;; Internal implementation, newbies should NOT touch code below this line!
@@ -344,7 +357,11 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'benchmark-init)
 (require-package 'langtool) ; check grammer
 (require-package 'typescript-mode)
-
+(require-package 'use-package)
+(require-package 'lsp-mode)
+(require-package 'lsp-ui)
+(require-package 'company-lsp)
+(require-package 'ccls)
 ;; {{ Fixed expiring GNU ELPA keys
 ;; GNU ELPA GPG key will expire on Sep-2019. So we need install this package to
 ;; update key or else users can't install packages from GNU ELPA.

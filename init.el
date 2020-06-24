@@ -138,6 +138,7 @@
   (require 'init-shackle)
   (require 'init-dired)
   (require 'init-writting)
+  (require 'init-lsp-mode)
 
   ;; @see https://github.com/hlissner/doom-emacs/wiki/FAQ
   ;; Adding directories under "site-lisp/" to `load-path' slows
