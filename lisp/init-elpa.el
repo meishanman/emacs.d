@@ -19,10 +19,10 @@
     evil-textobj-syntax
     command-log-mode
     vimrc-mode
-    rjsx-mode ; fixed the indent issue in jsx
+    ;; rjsx-mode ; fixed the indent issue in jsx
     auto-yasnippet
     dumb-jump
-    websocket ; to talk to the browser
+    ;; websocket ; to talk to the browser
     evil-exchange
     evil-find-char-pinyin
     evil-lion
@@ -31,11 +31,11 @@
     loc-changes
     test-simple
     ;; }}
-    counsel-css
+    ;; counsel-css
     iedit
     undo-tree
-    js-doc
-    jss ; remote debugger of browser
+    ;; js-doc
+    ;; jss ; remote debugger of browser
     ;; {{ since stable v0.9.1 released, we go back to stable version
     ivy ; stable counsel dependent unstable ivy
     ;; counsel
@@ -74,22 +74,22 @@
     tao-theme
     ;; }}
     slime
-    groovy-mode
+    ;; groovy-mode
     ;; company ; I won't wait another 2 years for stable
-    simple-httpd
-    dsvn
+    ;; simple-httpd
+    ;; dsvn
     findr
     mwe-log-commands
-    counsel-gtags ; the stable version is never released
+    ;; counsel-gtags ; the stable version is never released
     noflet
     db
     package-lint
     creole
-    web
+    ;; web
     buffer-move
     regex-tool
     legalese
-    htmlize
+    ;; htmlize
     scratch
     session
     flymake-lua
@@ -98,19 +98,20 @@
     lua-mode
     pomodoro
     packed
-    keyfreq
+    ;; keyfreq
     gitconfig-mode
     textile-mode
-    w3m
-    workgroups2
+    ;; w3m
+    ;; workgroups2
     zoutline
     use-package
     lsp-mode
     lsp-ui
     company-lsp
     ccls
-    company-c-headers
-    company-statistics)
+    ;; company-c-headers
+    ;; company-statistics
+    )
   "Packages to install from melpa-unstable.")
 
 (defvar melpa-stable-banned-packages nil
@@ -246,27 +247,27 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'wgrep)
 (require-package 'request)
 (require-package 'lua-mode)
-(require-package 'workgroups2)
+;; (require-package 'workgroups2)
 (require-package 'yaml-mode)
 (require-package 'paredit)
 (require-package 'findr)
-(require-package 'pinyinlib)
+;; (require-package 'pinyinlib)
 (require-package 'find-by-pinyin-dired)
 (require-package 'jump)
 (require-package 'nvm)
 (require-package 'writeroom-mode)
 (require-package 'haml-mode)
-(require-package 'scss-mode)
+;; (require-package 'scss-mode)
 (require-package 'markdown-mode)
 (require-package 'link)
 (require-package 'connection)
 (require-package 'dictionary) ; dictionary requires 'link and 'connection
-(require-package 'htmlize)
+;; (require-package 'htmlize)
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'rainbow-delimiters)
 (require-package 'textile-mode)
-(require-package 'dsvn)
+;; (require-package 'dsvn)
 (require-package 'git-timemachine)
 (require-package 'exec-path-from-shell)
 (require-package 'flymake-jslint)
@@ -278,13 +279,13 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'ibuffer-vc)
 (require-package 'command-log-mode)
 (require-package 'regex-tool)
-(require-package 'groovy-mode)
+;; (require-package 'groovy-mode)
 (require-package 'emmet-mode)
 (require-package 'winum)
 (require-package 'session)
 (require-package 'unfill)
-(require-package 'w3m)
-(require-package 'counsel-gtags)
+;; (require-package 'w3m)
+;; (require-package 'counsel-gtags)
 (require-package 'buffer-move)
 (require-package 'ace-window)
 (require-package 'cmake-mode)
@@ -294,35 +295,35 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'pomodoro)
 (require-package 'flymake-lua)
 ;; rvm-open-gem to get gem's code
-(require-package 'rvm)
+;; (require-package 'rvm)
 ;; C-x r l to list bookmarks
 (require-package 'multi-term)
-(require-package 'js-doc)
-(require-package 'js2-mode)
-(require-package 'rjsx-mode)
+;; (require-package 'js-doc)
+;; (require-package 'js2-mode)
+;; (require-package 'rjsx-mode)
 (require-package 'tagedit)
 (require-package 'git-link)
 (require-package 'cliphist)
 (require-package 'yasnippet)
 (require-package 'yasnippet-snippets)
 (require-package 'company)
-(require-package 'company-c-headers)
-(require-package 'company-statistics)
-(require-package 'elpy)
+;; (require-package 'company-c-headers)
+;; (require-package 'company-statistics)
+;; (require-package 'elpy)
 (require-package 'legalese)
-(require-package 'simple-httpd)
+;; (require-package 'simple-httpd)
 ;; (require-package 'git-gutter) ; use my patched version
 (require-package 'neotree)
 (require-package 'hydra)
 (require-package 'ivy-hydra) ; @see https://oremacs.com/2015/07/23/ivy-multiaction/
-(require-package 'pyim-basedict) ; it's default pyim dictionary
-(require-package 'web-mode)
+;; (require-package 'pyim-basedict) ; it's default pyim dictionary
+;; (require-package 'web-mode)
 (require-package 'dumb-jump)
 (require-package 'emms)
 (require-package 'package-lint) ; lint package before submit it to MELPA
 (require-package 'iedit)
 (require-package 'bash-completion)
-(require-package 'websocket) ; for debug debugging of browsers
+;; (require-package 'websocket) ; for debug debugging of browsers
 (require-package 'jss)
 (require-package 'undo-tree)
 (require-package 'evil)
@@ -339,9 +340,9 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'evil-args)
 (require-package 'evil-textobj-syntax)
 (require-package 'slime)
-(require-package 'counsel-css)
+;; (require-package 'counsel-css)
 (require-package 'auto-package-update)
-(require-package 'keyfreq)
+;; (require-package 'keyfreq)
 (require-package 'adoc-mode) ; asciidoc files
 (require-package 'shackle)
 (require-package 'toc-org)
@@ -353,7 +354,7 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'visual-regexp) ;; Press "M-x vr-*"
 (require-package 'vimrc-mode)
 (require-package 'nov) ; read epub
-(require-package 'rust-mode)
+;; (require-package 'rust-mode)
 (require-package 'benchmark-init)
 (require-package 'langtool) ; check grammer
 (require-package 'typescript-mode)

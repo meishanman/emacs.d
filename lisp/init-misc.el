@@ -336,47 +336,13 @@ Keep the last num lines if argument num if given."
 (add-auto-mode 'vimrc-mode "\\.?vim\\(rc\\)?$")
 
 ;; {{ show email sent by `git send-email' in gnus
-(eval-after-load 'gnus
-  '(progn
-     (local-require 'gnus-article-treat-patch)
-     (setq gnus-article-patch-conditions
-           '( "^@@ -[0-9]+,[0-9]+ \\+[0-9]+,[0-9]+ @@" ))
-     ))
+;; (eval-after-load 'gnus
+;;   '(progn
+;;      (local-require 'gnus-article-treat-patch)
+;;      (setq gnus-article-patch-conditions
+;;            '( "^@@ -[0-9]+,[0-9]+ \\+[0-9]+,[0-9]+ @@" ))
+;;      ))
 ;; }}
-
-(defun my-multi-purpose-grep (n)
-  (interactive "P")
-  (cond
-   ((not n)
-    (counsel-etags-grep))
-   ((= n 1)
-    ;; grep references of current web component
-    ;; component could be inside styled-component like `const c = styled(Comp1)`
-    (let* ((fb (file-name-base buffer-file-name)))
-      (when (string= "index" fb)
-        (setq fb (file-name-base (directory-file-name (file-name-directory (directory-file-name buffer-file-name))))))
-        (counsel-etags-grep (format "(<%s( *$| [^ ])|styled\\\(%s\\))" fb fb))))
-   ((= n 2)
-    ;; grep web component attribute name
-    (counsel-etags-grep (format "^ *%s[=:]" (or (thing-at-point 'symbol)
-                                                (read-string "Component attribute name?")))))
-   ((= n 3)
-    ;; grep current file name
-    (counsel-etags-grep (format ".*%s" (file-name-nondirectory buffer-file-name))))
-   ((= n 4)
-    ;; grep js files which is imported
-    (counsel-etags-grep (format "from .*%s('|\\\.js');?"
-                                (file-name-base (file-name-nondirectory buffer-file-name)))))
-   ((= n 5)
-    ;; grep Chinese using pinyinlib.
-    ;; In ivy filter, trigger key must be pressed before filter chinese
-    (unless (featurep 'pinyinlib) (require 'pinyinlib))
-    (let* ((counsel-etags-convert-grep-keyword
-            (lambda (keyword)
-              (if (and keyword (> (length keyword) 0))
-                  (pinyinlib-build-regexp-string keyword t)
-                keyword))))
-      (counsel-etags-grep)))))
 
 (defun toggle-full-window()
   "Toggle the full view of selected window"
@@ -501,8 +467,8 @@ Keep the last num lines if argument num if given."
      (winum-mode 1)))
 ;; }}
 
-(local-require 'ace-pinyin)
-(ace-pinyin-global-mode +1)
+;; (local-require 'ace-pinyin)
+;; (ace-pinyin-global-mode +1)
 
 ;; {{ avy, jump between texts, like easymotion in vim
 ;; @see http://emacsredux.com/blog/2015/07/19/ace-jump-mode-is-dead-long-live-avy/ for more tips
