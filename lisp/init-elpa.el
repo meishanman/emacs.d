@@ -15,7 +15,7 @@
   '(ace-window ; lastest stable is released on year 2014
     auto-package-update
     nov
-    bbdb
+    ;; bbdb
     evil-textobj-syntax
     command-log-mode
     vimrc-mode
@@ -65,11 +65,11 @@
     tango-plus-theme
     twilight-theme
     minimal-theme
-    noctilux-theme
+    ;; noctilux-theme
     soothe-theme
     heroku-theme
     hemisu-theme
-    badger-theme
+    ;; badger-theme
     distinguished-theme
     tao-theme
     ;; }}
@@ -270,17 +270,17 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 ;; (require-package 'dsvn)
 (require-package 'git-timemachine)
 (require-package 'exec-path-from-shell)
-(require-package 'flymake-jslint)
+;; (require-package 'flymake-jslint)
 (require-package 'ivy)
 (require-package 'swiper)
 (require-package 'counsel) ; counsel => swiper => ivy
 (require-package 'find-file-in-project)
-(require-package 'counsel-bbdb)
+;; (require-package 'counsel-bbdb)
 (require-package 'ibuffer-vc)
 (require-package 'command-log-mode)
 (require-package 'regex-tool)
 ;; (require-package 'groovy-mode)
-(require-package 'emmet-mode)
+;; (require-package 'emmet-mode)
 (require-package 'winum)
 (require-package 'session)
 (require-package 'unfill)
@@ -291,7 +291,7 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'cmake-mode)
 (require-package 'cpputils-cmake)
 (require-package 'flyspell-lazy)
-(require-package 'bbdb)
+;; (require-package 'bbdb)
 (require-package 'pomodoro)
 (require-package 'flymake-lua)
 ;; rvm-open-gem to get gem's code
@@ -319,12 +319,12 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 ;; (require-package 'pyim-basedict) ; it's default pyim dictionary
 ;; (require-package 'web-mode)
 (require-package 'dumb-jump)
-(require-package 'emms)
+;; (require-package 'emms)
 (require-package 'package-lint) ; lint package before submit it to MELPA
 (require-package 'iedit)
 (require-package 'bash-completion)
 ;; (require-package 'websocket) ; for debug debugging of browsers
-(require-package 'jss)
+;; (require-package 'jss)
 (require-package 'undo-tree)
 (require-package 'evil)
 (require-package 'evil-escape)
@@ -350,14 +350,14 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 ;; {{ @see https://pawelbx.github.io/emacs-theme-gallery/
 (require-package 'color-theme)
 ;; emms v5.0 need seq
-(require-package 'seq)
+;; (require-package 'seq)
 (require-package 'visual-regexp) ;; Press "M-x vr-*"
 (require-package 'vimrc-mode)
 (require-package 'nov) ; read epub
 ;; (require-package 'rust-mode)
 (require-package 'benchmark-init)
 (require-package 'langtool) ; check grammer
-(require-package 'typescript-mode)
+;; (require-package 'typescript-mode)
 (require-package 'use-package)
 (require-package 'lsp-mode)
 (require-package 'lsp-ui)
@@ -406,7 +406,7 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
   (require-package 'gruber-darker-theme)
   (require-package 'ample-zen-theme)
   (require-package 'doom-themes)
-  (require-package 'noctilux-theme)
+  ;; (require-package 'noctilux-theme)
   (require-package 'flatland-theme)
   (require-package 'organic-green-theme)
   (require-package 'inkpot-theme)
@@ -431,7 +431,7 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
   (require-package 'cherry-blossom-theme)
   (require-package 'heroku-theme)
   (require-package 'hemisu-theme)
-  (require-package 'badger-theme)
+  ;;(require-package 'badger-theme)
   (require-package 'distinguished-theme)
   (require-package 'challenger-deep-theme))
 ;; }}
