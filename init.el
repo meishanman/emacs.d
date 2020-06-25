@@ -94,7 +94,7 @@
   (require 'init-ibuffer)
   (require 'init-ivy)
   (require 'init-hippie-expand)
-  (require 'init-windows)
+  ;; (require 'init-windows)
   (require 'init-markdown)
   ;; (require 'init-javascript)
   (require 'init-org)
@@ -109,12 +109,12 @@
   (require 'init-linum-mode)
   ;; (require 'init-git) ;; git-gutter should be enabled after `display-line-numbers-mode' turned on
   ;; (require 'init-gist)
-  (require 'init-gtags)
+  ;; (require 'init-gtags)
   ;; init-evil dependent on init-clipboard
-  ;;(require 'init-clipboard)
+  ;; (require 'init-clipboard)
   ;; use evil mode (vi key binding)
   ;; (require 'init-evil)
-  (require 'init-ctags)
+  ;; (require 'init-ctags)
   ;; (require 'init-bbdb)
   ;; (require 'init-gnus)
   (require 'init-lua-mode)
@@ -136,8 +136,8 @@
   ;;(require 'init-emacs-w3m)
   (require 'init-hydra)
   (require 'init-shackle)
-  (require 'init-dired)
-  (require 'init-writting)
+  ;; (require 'init-dired)
+  ;; (require 'init-writting)
   (require 'init-lsp-mode)
 
   ;; @see https://github.com/hlissner/doom-emacs/wiki/FAQ

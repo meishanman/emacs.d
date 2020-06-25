@@ -156,7 +156,7 @@ You still need modify `package-archives' in \"init-elpa.el\" to PERMANENTLY use 
 ;; Un-comment below line if you follow "Install stable version in easiest way"
 ;;(setq package-archives '(("localelpa" . "~/.emacs.d/localelpa/") ("myelpa" . "~/.usr/myelpa/")))
 (setq package-archives '(
-        ;;("localelpa" . "~/.emacs.d/localelpa/")
+        ("localelpa" . "~/.emacs.d/localelpa/")
          ;; ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
           ("gnu" . "http://mirrors.163.com/elpa/gnu/")
 	  ("melpa" . "http://mirrors.163.com/elpa/melpa/")
