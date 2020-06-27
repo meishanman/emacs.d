@@ -104,7 +104,7 @@
     ;; w3m
     ;; workgroups2
     zoutline
-    use-package
+    ;;use-package
     lsp-mode
     lsp-ui
     company-lsp
@@ -358,7 +358,7 @@ PACKAGE is a symbol, VERSION is a vector as produced by `version-to-list', and
 (require-package 'benchmark-init)
 (require-package 'langtool) ; check grammer
 ;; (require-package 'typescript-mode)
-(require-package 'use-package)
+;; (require-package 'use-package)
 (require-package 'lsp-mode)
 (require-package 'lsp-ui)
 (require-package 'company-lsp)
