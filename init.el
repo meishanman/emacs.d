@@ -111,9 +111,9 @@
   ;; (require 'init-gist)
   ;; (require 'init-gtags)
   ;; init-evil dependent on init-clipboard
-  ;; (require 'init-clipboard)
+  (require 'init-clipboard)
   ;; use evil mode (vi key binding)
-  ;; (require 'init-evil)
+  (require 'init-evil)
   ;; (require 'init-ctags)
   ;; (require 'init-bbdb)
   ;; (require 'init-gnus)

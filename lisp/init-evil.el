@@ -651,7 +651,10 @@ If the character before and after CH is space or tab, CH is NOT slash"
  "xnd" 'narrow-to-defun
  "xnr" 'narrow-to-region
  "ycr" 'my-yas-reload-all
- "wf" 'popup-which-function)
+ "wf" 'popup-which-function
+ "bd" 'xref-find-definitions
+ "fr" 'xref-find-references
+ )
 ;; }}
 
 ;; {{ Use `SPC` as leader key
